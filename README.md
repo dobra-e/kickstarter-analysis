@@ -21,6 +21,10 @@ The dataset and analysis can be viewed in the Kickstarter Challenge.
 To start the analysis, "Years" was added to the dataset using the formula `=YEAR(@R:R)`. Next, a pivot table was created with "Years" and "Parent Category" as filters, "outcomes" in columns, "Date Created Conversion" in rows, and "Count of Outcomes" in values. Two fields, "Years2" and "Quarters", were automatically created when adding "Date Created Conversion" to rows. These two fields were deleted from rows to collapse the pivot table.
 
 The resulting table was then filtered by "Parent Category" to show only "theater" campaigns. The column labels were sorted in descending order and filtered to exclude "live" and "blank" campaign outcomes. 
+| ![Pivot Table](/Resources/PivotTable.png) | 
+|:--:| 
+| *Pivot Table of Outcomes Based on Launch Date* |
+
 ![Pivot Table](/Resources/PivotTable.png)
 
 ### Analysis of Outcomes Based on Goals
