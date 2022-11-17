@@ -21,19 +21,25 @@ The dataset and analysis can be viewed in the Kickstarter Challenge.
 To start the analysis, "Years" was added to the dataset using the formula `=YEAR(@R:R)`. Next, a pivot table was created with "Years" and "Parent Category" as filters, "outcomes" in columns, "Date Created Conversion" in rows, and "Count of Outcomes" in values. Two fields, "Years2" and "Quarters", were automatically created when adding "Date Created Conversion" to rows. These two fields were deleted from rows to collapse the pivot table.
 
 The resulting table was then filtered by "Parent Category" to show only "theater" campaigns. The column labels were sorted in descending order and filtered to exclude "live" and "blank" campaign outcomes. 
+
+<div align="center">
 | ![Pivot Table](/Resources/PivotTable.png) | 
 |:--:| 
 | *Pivot Table of Outcomes Based on Launch Date* |
-
-![Pivot Table](/Resources/PivotTable.png)
+</div>
 
 ### Analysis of Outcomes Based on Goals
-To show outcomes based on goals, a table was created which showed the total number and percentage of successful, failed, and canceled campaigns for each goal range. To calculate the number of campaigns, `COUNTIFS` was used which filtered on campaign outcome, goal range, and subcategory. 
+To show outcomes based on goals, a table was created which showed the total number and percentage of successful, failed, and canceled campaigns for each goal range. There were 12 goal ranges from "Less than $1,000" to "More than $50,000" in $5,000 increments. To calculate the number of campaigns, `COUNTIFS` was used which filtered on campaign outcome, goal range, and subcategory. See the example below:
 
-For example, `=COUNTIFS(Kickstarter!$F:$F, "successful",Kickstarter!$D:$D,">=1000",Kickstarter!$D:$D,"<=4999",Kickstarter!$O:$O,"plays")`. 
+`=COUNTIFS(Kickstarter!$F:$F, "successful",Kickstarter!$D:$D,">=1000",Kickstarter!$D:$D,"<=4999",Kickstarter!$O:$O,"plays")`. 
 
 The total number of projects for each goal range and the percentage of successful, failed, and canceled projects for each goal range was also calculated.
-![Table](/Resources/Table.png)
+
+<div align="center">
+| ![Table](/Resources/Table.png) | 
+|:--:| 
+| *Table of Outcomes Based on Goals* |
+</div>
 
 ### Challenges and Difficulties Encountered
 There were few difficulties in conducting this analysis. The only task that required a little bit of extra research was determining how to include multiple conditions in the `COUNTIFS()` function. To learn more about the function, I consulted [W3schools](https://www.w3schools.com/excel/excel_countifs.php).
@@ -47,18 +53,30 @@ For individuals with little experience in Excel, I could also see where creating
 The month with the greatest number of campaign launches was May, followed by June, July, and August. Based on this analysis, the summer months are the most popular time to launch a fundraising campaign and May is the month with the highest proportion of successful campaigns. 
 
 December is the worst month to launch a campaign. Almost 50% of campaigns failed during this month. 
-![Outcomes by Launch Date](/Resources/Theater_Outcomes_vs_Launch.png)
+
+<div align="center">
+| ![Outcomes by Launch Date](/Resources/Theater_Outcomes_vs_Launch.png) | 
+|:--:| 
+| *Line Chart of Outcomes Based on Launch Date* |
+</div>
 
 ### Campaign Outcomes by Goal Conclusion
 The majority of campaigns, 889 in total, have a funding goal of less than $10,000. Within this subset, the lower the funding goal, the greater the percentage of successful campaigns. Once the funding goal increases to $15,000 or more, the percentage of failed campaigns is more likely to be greater than the percentage of successful campaigns. 
-![Outcomes by Goal](/Resources/Outcomes_vs_Goals.png)
+
+<div align="center">
+| ![Outcomes by Goal](/Resources/Outcomes_vs_Goals.png) | 
+|:--:| 
+| *Line Chart of Outcomes By Goal* |
+</div>
 
 ### Limitations
 The dataset only includes projects from 2009-2017. This data may not accurately reflect trends that are present in more current data, particularly within the last three years. Making decisions on the basis of outdated information carries risks.
 
-The dataset is also relatively small. This is especially evident when looking at campaigns by goal amount. There are very few campaigns with goals greater than $20,000 which makes comparing the success of larger campaigns with the smaller campaigns unreliable. 
+The dataset is also relatively small. This is especially evident when looking at campaigns by goal amount. There are very few campaigns with goals greater than $20,000 which makes comparing the success of larger campaigns with smaller campaigns unreliable. 
+
+Additionally, the number of backers is included in the dataset, but there are no demographic variables about the backers. Without knowing more about the donors who contributed to successful campaigns, the campaign cannot be targeted to those most likely to contribute.
 
 ### Additional Tables and Graphs
-Since fund raising campaign is seeking $10,000 for the campaign, it may be useful to create more granular tables or graphs that focus on funding under $15,000. More specifically, for the Outcomes Based on Goals table and chart, creating a chart with dollar ranges for every $1,000 instead of $5,000. 
+Since the fund raising campaign is seeking $10,000, it may be useful to create more granular tables or graphs that focus on funding under $15,000. More specifically, for the Outcomes Based on Goals analysis, creating a chart with dollar ranges for every $1,000 instead of $5,000. This would allow 
 
 It would also be interesting to compare plays to other subcategories of campaigns. 
