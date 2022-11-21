@@ -18,9 +18,9 @@ The Kickstarter data contains information for campaigns between 2009 and 2017. S
 The dataset and analysis can be viewed in the Kickstarter Challenge.
 
 ### Analysis of Outcomes Based on Launch Date
-To start the analysis, "Years" was added to the dataset using the formula `=YEAR(@R:R)`. Next, a pivot table was created with "Years" and "Parent Category" as filters, "outcomes" in columns, "Date Created Conversion" in rows, and "Count of Outcomes" in values. Two fields, "Years2" and "Quarters", were automatically created when adding "Date Created Conversion" to rows. These two fields were deleted from rows to collapse the pivot table.
+To start the analysis, "Years" was added to the dataset using the formula `=YEAR(@R:R)`. Next, a pivot table was created with "Years" and "Parent Category" as filters, "outcomes" in columns, "Date Created Conversion" in rows, and "Count of Outcomes" in values. Two fields, "Years2" and "Quarters", were automatically created when adding "Date Created Conversion" to rows. These two fields were deleted from rows to collapse the pivot table to only show the months of the year.
 
-The resulting table was then filtered by "Parent Category" to show only "theater" campaigns. The column labels were sorted in descending order and filtered to exclude "live" and "blank" campaign outcomes. 
+The resulting table was then filtered by "Parent Category" to show only "theater" campaigns. The column labels were sorted in descending order and filtered to exclude "live" and "blank" campaign outcomes (see below).
 
 | ![Pivot Table](/Resources/PivotTable.png) | 
 |:--:| 
@@ -31,7 +31,7 @@ To show outcomes based on goals, a table was created which showed the total numb
 
 `=COUNTIFS(Kickstarter!$F:$F, "successful",Kickstarter!$D:$D,">=1000",Kickstarter!$D:$D,"<=4999",Kickstarter!$O:$O,"plays")`. 
 
-The total number of projects for each goal range and the percentage of successful, failed, and canceled projects for each goal range was also calculated.
+The total number of projects for each goal range and the percentage of successful, failed, and canceled projects for each goal range was also calculated. To find the total number of projects, the `SUM()` function was used. For the percentages, the number successful, failed, and canceled were each divided by the total number of projects in the specified goal range.
 
 | ![Table](/Resources/Table.png) | 
 |:--:| 
@@ -46,9 +46,9 @@ For individuals with little experience in Excel, I could also see where creating
 ## Results
 
 ### Compaign Outcomes by Launch Date Conclusions
-The month with the greatest number of campaign launches was May, followed by June, July, and August. Based on this analysis, the summer months are the most popular time to launch a fundraising campaign and May is the month with the highest proportion of successful campaigns. 
+The month with the greatest number of campaign launches was May, followed by June, July, and August. Based on this analysis, the summer months are the most popular time to launch a fundraising campaign and May is the month with the highest proportion of successful campaigns. Following the trends in the data, the campaign should be launched in May.
 
-December is the worst month to launch a campaign. Almost 50% of campaigns failed during this month. 
+December is the worst month to launch a campaign. Almost 50% of campaigns failed during this month. Launching a campaign in this month should be avoided.
 
 | ![Outcomes by Launch Date](/Resources/Theater_Outcomes_vs_Launch.png) | 
 |:--:| 
@@ -69,6 +69,6 @@ The dataset is also relatively small. This is especially evident when looking at
 Additionally, the number of backers is included in the dataset, but there are no demographic variables about the backers. Without knowing more about the donors who contributed to successful campaigns, the campaign cannot be targeted to those most likely to contribute.
 
 ### Additional Tables and Graphs
-Since the fund raising campaign is seeking $10,000, it may be useful to create more granular tables or graphs that focus on funding under $15,000. More specifically, for the Outcomes Based on Goals analysis, creating a chart with dollar ranges for every $1,000 instead of $5,000. This would allow 
+Since the fund raising campaign is seeking $10,000, it may be useful to create more granular tables or graphs that focus on funding under $15,000. More specifically, for the Outcomes Based on Goals analysis, creating a chart with dollar ranges for every $1,000 instead of $5,000. This would help identify the best fundraising goal. 
 
-It would also be interesting to compare plays to other subcategories of campaigns. 
+It would also be interesting to compare plays to other subcategories of campaigns. For instance, comparing plays to somewhat similar art forms like musicals may strengthen the above conclusions or show different trends entirely.
