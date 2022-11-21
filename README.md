@@ -7,7 +7,7 @@
 The purpose of this project was to analyze Kickstarter data and gain insights to plan a fundraising campaign for a play. The goal was to analyze the factors that contribute to a successful campaign. More specifically, we were interested in how funding goals and launch date are related to campaign outcomes.
 
 ## Analysis and Challenges
-The Kickstarter data contains information for campaigns between 2009 and 2017. Some of the fields included in the dataset to describe the campaigns include: 
+The Kickstarter data contains information for campaigns between 2009 and 2017. Some of the fields used in the dataset to describe the campaigns include: 
 * parent category
 * subcategory
 * goal amount
