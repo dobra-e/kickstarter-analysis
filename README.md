@@ -4,7 +4,7 @@
 [Kickstarter](https://www.kickstarter.com/?ref=ksr-redirect-kickstarter_today) is a crowdfunding platform that has been used to raise over $6 billion and successfully fund more than 230,000 creative projects. Within the theater category, over $49 million has been raised with a success rate of approximately 60%. This project uses Kickstarter data to analyze trends in successful and unsuccessful theater campaigns.
 
 ### Purpose
-The purpose of this project was to analyze Kickstarter campaigns and gain insights to plan a fundraising campaign for a play. The goal was to analyze the factors that contribute to a successful campaign. More specifically, we were interested in how funding goals and launch date are related to campaign outcomes.
+The purpose of this project was to analyze Kickstarter data and gain insights to plan a fundraising campaign for a play. The goal was to analyze the factors that contribute to a successful campaign. More specifically, we were interested in how funding goals and launch date are related to campaign outcomes.
 
 ## Analysis and Challenges
 The Kickstarter data contains information for campaigns between 2009 and 2017. Some of the fields included in the dataset to describe the campaigns include: 
