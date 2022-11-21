@@ -22,11 +22,9 @@ To start the analysis, "Years" was added to the dataset using the formula `=YEAR
 
 The resulting table was then filtered by "Parent Category" to show only "theater" campaigns. The column labels were sorted in descending order and filtered to exclude "live" and "blank" campaign outcomes. 
 
-<div align="center">
 | ![Pivot Table](/Resources/PivotTable.png) | 
 |:--:| 
 | *Pivot Table of Outcomes Based on Launch Date* |
-</div>
 
 ### Analysis of Outcomes Based on Goals
 To show outcomes based on goals, a table was created which showed the total number and percentage of successful, failed, and canceled campaigns for each goal range. There were 12 goal ranges from "Less than $1,000" to "More than $50,000" in $5,000 increments. To calculate the number of campaigns, `COUNTIFS` was used which filtered on campaign outcome, goal range, and subcategory. See the example below:
@@ -34,12 +32,11 @@ To show outcomes based on goals, a table was created which showed the total numb
 `=COUNTIFS(Kickstarter!$F:$F, "successful",Kickstarter!$D:$D,">=1000",Kickstarter!$D:$D,"<=4999",Kickstarter!$O:$O,"plays")`. 
 
 The total number of projects for each goal range and the percentage of successful, failed, and canceled projects for each goal range was also calculated.
-
-<div align="center">
+<p align="center">
 | ![Table](/Resources/Table.png) | 
 |:--:| 
 | *Table of Outcomes Based on Goals* |
-</div>
+</p>
 
 ### Challenges and Difficulties Encountered
 There were few difficulties in conducting this analysis. The only task that required a little bit of extra research was determining how to include multiple conditions in the `COUNTIFS()` function. To learn more about the function, I consulted [W3schools](https://www.w3schools.com/excel/excel_countifs.php).
