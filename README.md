@@ -32,11 +32,10 @@ To show outcomes based on goals, a table was created which showed the total numb
 `=COUNTIFS(Kickstarter!$F:$F, "successful",Kickstarter!$D:$D,">=1000",Kickstarter!$D:$D,"<=4999",Kickstarter!$O:$O,"plays")`. 
 
 The total number of projects for each goal range and the percentage of successful, failed, and canceled projects for each goal range was also calculated.
-<p align="center">
+
 | ![Table](/Resources/Table.png) | 
 |:--:| 
 | *Table of Outcomes Based on Goals* |
-</p>
 
 ### Challenges and Difficulties Encountered
 There were few difficulties in conducting this analysis. The only task that required a little bit of extra research was determining how to include multiple conditions in the `COUNTIFS()` function. To learn more about the function, I consulted [W3schools](https://www.w3schools.com/excel/excel_countifs.php).
@@ -51,20 +50,16 @@ The month with the greatest number of campaign launches was May, followed by Jun
 
 December is the worst month to launch a campaign. Almost 50% of campaigns failed during this month. 
 
-<div align="center">
 | ![Outcomes by Launch Date](/Resources/Theater_Outcomes_vs_Launch.png) | 
 |:--:| 
 | *Line Chart of Outcomes Based on Launch Date* |
-</div>
 
 ### Campaign Outcomes by Goal Conclusion
 The majority of campaigns, 889 in total, have a funding goal of less than $10,000. Within this subset, the lower the funding goal, the greater the percentage of successful campaigns. Once the funding goal increases to $15,000 or more, the percentage of failed campaigns is more likely to be greater than the percentage of successful campaigns. 
 
-<div align="center">
 | ![Outcomes by Goal](/Resources/Outcomes_vs_Goals.png) | 
 |:--:| 
 | *Line Chart of Outcomes By Goal* |
-</div>
 
 ### Limitations
 The dataset only includes projects from 2009-2017. This data may not accurately reflect trends that are present in more current data, particularly within the last three years. Making decisions on the basis of outdated information carries risks.
