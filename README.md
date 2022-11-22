@@ -15,7 +15,7 @@ The Kickstarter data contains information for campaigns between 2009 and 2017. S
 * launch date
 * outcomes
 
-The dataset and analysis can be viewed in the Kickstarter Challenge.
+The dataset and analysis can be viewed in the Kickstarter_Challenge.xlsx file.
 
 ### Analysis of Outcomes Based on Launch Date
 To start the analysis, "Years" was added to the dataset using the formula `=YEAR(@R:R)`. Next, a pivot table was created with "Years" and "Parent Category" as filters, "outcomes" in columns, "Date Created Conversion" in rows, and "Count of Outcomes" in values. Two fields, "Years2" and "Quarters", were automatically created when adding "Date Created Conversion" to rows. These two fields were deleted from rows to collapse the pivot table to only show the months of the year.
